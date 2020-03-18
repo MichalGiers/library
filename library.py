@@ -21,11 +21,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.actionCzytelnik.setIcon(QIcon("resources/readers.png"))
         self.actionKsiazka.setIcon(QIcon("resources/books.png"))
         self.actionZamknij.setIcon(QIcon("resources/iconClose.png"))
+	#test
 
     def displayDetails(self, idx):
         row = idx.row()
         id = dbManager.modelOrders.data(dbManager.modelOrders.index(row, 0))
         self.tableViewDetails.setModel(dbManager.getModelDetails(id))
+
+
 
     def initConnections(self):
         self.actionCzytelnik.triggered.connect(self.openReadersDialog)
