@@ -8,10 +8,10 @@ class DatabaseManager():
     def __init__(self):
         self.db = QSqlDatabase.addDatabase("QMYSQL")
         self.db.setHostName("127.0.0.1")
-        # self.db.setUserName("mat")
-        # self.db.setPassword("s")
-        self.db.setUserName("root")
-        self.db.setPassword("123123")
+        self.db.setUserName("mat")
+        self.db.setPassword("s")
+        #self.db.setUserName("root")
+        #self.db.setPassword("123123")
         self.db.setDatabaseName("biblioteka")
         self.connect()
 
