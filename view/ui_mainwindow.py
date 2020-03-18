@@ -2,11 +2,13 @@
 
 # Form implementation generated from reading ui file 'mainwindow.ui'
 #
-# Created by: PyQt5 UI code generator 5.5.1
+# Created by: PyQt5 UI code generator 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -19,7 +21,6 @@ class Ui_MainWindow(object):
         self.verticalLayout.setSpacing(6)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
-        self.horizontalLayout.setContentsMargins(11, 11, 11, 11)
         self.horizontalLayout.setSpacing(6)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label = QtWidgets.QLabel(self.centralWidget)
@@ -32,15 +33,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.pushButtonAfterTime)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_3.setContentsMargins(11, 11, 11, 11)
         self.horizontalLayout_3.setSpacing(6)
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.tableViewOrders = QtWidgets.QTableView(self.centralWidget)
+        self.tableViewOrders.setSelectionMode(QtWidgets.QAbstractItemView.SingleSelection)
+        self.tableViewOrders.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         self.tableViewOrders.setObjectName("tableViewOrders")
+        self.tableViewOrders.horizontalHeader().setStretchLastSection(True)
         self.horizontalLayout_3.addWidget(self.tableViewOrders)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_4.setContentsMargins(11, 11, 11, 11)
         self.horizontalLayout_4.setSpacing(6)
         self.horizontalLayout_4.setObjectName("horizontalLayout_4")
         self.label_2 = QtWidgets.QLabel(self.centralWidget)
@@ -51,13 +53,11 @@ class Ui_MainWindow(object):
         self.verticalLayout.addLayout(self.horizontalLayout_4)
         self.tableViewDetails = QtWidgets.QTableView(self.centralWidget)
         self.tableViewDetails.setObjectName("tableViewDetails")
+        self.tableViewDetails.horizontalHeader().setStretchLastSection(True)
         self.verticalLayout.addWidget(self.tableViewDetails)
-        self.tableViewDetails.raise_()
-        self.label_2.raise_()
-        self.label_2.raise_()
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(MainWindow)
-        self.menuBar.setGeometry(QtCore.QRect(0, 0, 640, 27))
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 640, 22))
         self.menuBar.setObjectName("menuBar")
         self.menuWidok = QtWidgets.QMenu(self.menuBar)
         self.menuWidok.setObjectName("menuWidok")
@@ -114,4 +114,3 @@ class Ui_MainWindow(object):
         self.actionNoweZamowienie.setText(_translate("MainWindow", "Nowe zamówienie"))
         self.actionNoweZamowienie.setShortcut(_translate("MainWindow", "Ctrl+N"))
         self.actionPolaczenie.setText(_translate("MainWindow", "Połączenie"))
-
