@@ -20,7 +20,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def displayDetails(self, idx):
         row = idx.row()
         id = dbManager.modelOrders.data(dbManager.modelOrders.index(row, 0))
-        print(id)
         self.tableViewDetails.setModel(dbManager.getModelDetails(id))
 
     def initConnections(self):
