@@ -14,5 +14,5 @@ class AddReaderDialog(QDialog, Ui_NewReaderDialog):
         self.setWindowTitle("Nowy czytelnik")
 
 
-        
+
 

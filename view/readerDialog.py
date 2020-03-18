@@ -21,7 +21,7 @@ class ReaderDialog(QDialog, Ui_Dialog):
 
         dbManager.initializeReadersModel()
         self.tableViewReaders.setModel(dbManager.modelReaders)
-        # self.tableViewReaders.hideColumn(0)
+        self.tableViewReaders.hideColumn(0)
 
     def enableDeleteButton(self):
         self.pushButtonDelete.setEnabled(1)
