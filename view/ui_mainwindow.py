@@ -78,8 +78,6 @@ class Ui_MainWindow(object):
         self.actionMagazyn = QtWidgets.QAction(MainWindow)
         self.actionMagazyn.setObjectName("actionMagazyn")
         self.actionNoweZamowienie = QtWidgets.QAction(MainWindow)
-        icon = QtGui.QIcon.fromTheme("nowe.png")
-        self.actionNoweZamowienie.setIcon(icon)
         self.actionNoweZamowienie.setObjectName("actionNoweZamowienie")
         self.actionPolaczenie = QtWidgets.QAction(MainWindow)
         self.actionPolaczenie.setObjectName("actionPolaczenie")
@@ -93,6 +91,8 @@ class Ui_MainWindow(object):
         self.menuBar.addAction(self.menuWidok.menuAction())
         self.menuBar.addAction(self.menuUstawienia.menuAction())
         self.toolBar.addAction(self.actionNoweZamowienie)
+        self.toolBar.addAction(self.actionCzytelnik)
+        self.toolBar.addAction(self.actionKsiazka)
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)

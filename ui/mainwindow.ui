@@ -141,6 +141,8 @@
     <bool>false</bool>
    </attribute>
    <addaction name="actionNoweZamowienie"/>
+   <addaction name="actionCzytelnik"/>
+   <addaction name="actionKsiazka"/>
   </widget>
   <action name="actionZamknij">
    <property name="text">
@@ -163,10 +165,6 @@
    </property>
   </action>
   <action name="actionNoweZamowienie">
-   <property name="icon">
-    <iconset theme="nowe.png">
-     <normaloff>.</normaloff>.</iconset>
-   </property>
    <property name="text">
     <string>Nowe zamówienie</string>
    </property>

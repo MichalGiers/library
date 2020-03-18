@@ -3,6 +3,7 @@ from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtSql import *
+from PyQt5.QtGui import *
 
 from view.ui_mainwindow import Ui_MainWindow
 from view.bookDialog import BookDialog
@@ -16,6 +17,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setWindowTitle("Biblioteka")
         self.initConnections()
         self.tableViewOrders.clicked.connect(self.displayDetails)
+        self.actionNoweZamowienie.setIcon(QIcon("resources/newOrder.png"))
+        self.actionCzytelnik.setIcon(QIcon("resources/readers.png"))
+        self.actionKsiazka.setIcon(QIcon("resources/books.png"))
+        self.actionZamknij.setIcon(QIcon("resources/iconClose.png"))
 
     def displayDetails(self, idx):
         row = idx.row()

@@ -12,7 +12,3 @@ class AddReaderDialog(QDialog, Ui_NewReaderDialog):
         super(AddReaderDialog, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Nowy czytelnik")
-
-
-
-
