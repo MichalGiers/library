@@ -21,6 +21,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.actionCzytelnik.setIcon(QIcon("resources/readers.png"))
         self.actionKsiazka.setIcon(QIcon("resources/books.png"))
         self.actionZamknij.setIcon(QIcon("resources/iconClose.png"))
+	#
 
     def displayDetails(self, idx):
         row = idx.row()
