@@ -18,6 +18,8 @@ class Ui_BookDialog(object):
         self.tableViewBooks.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectItems)
         self.tableViewBooks.setObjectName("tableViewBooks")
         self.verticalLayout.addWidget(self.tableViewBooks)
+        self.tableViewBooks.setSortingEnabled(True)
+
 
         self.retranslateUi(BookDialog)
         QtCore.QMetaObject.connectSlotsByName(BookDialog)
