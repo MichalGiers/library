@@ -8,10 +8,10 @@ class DatabaseManager():
     def __init__(self):
         self.db = QSqlDatabase.addDatabase("QMYSQL")
         self.db.setHostName("127.0.0.1")
-        self.db.setUserName("mat")
-        self.db.setPassword("s")
-        #self.db.setUserName("root")
-        #self.db.setPassword("123123")
+        #self.db.setUserName("mat")
+        #self.db.setPassword("s")
+        self.db.setUserName("root")
+        self.db.setPassword("123123")
         self.db.setDatabaseName("biblioteka")
         self.connect()
 
@@ -46,6 +46,17 @@ class DatabaseManager():
         self.modelBooks = QSqlTableModel()
         self.modelBooks.setTable("ksiazka")
         self.modelBooks.select()
+        self.modelBooks.setHeaderData(0, Qt.Horizontal, "ID KSIĄŻKA")
+        self.modelBooks.setHeaderData(1, Qt.Horizontal, "ID KATEGORIA")
+        self.modelBooks.setHeaderData(2, Qt.Horizontal, "ISBN")
+        self.modelBooks.setHeaderData(3, Qt.Horizontal, "TYTUŁ")
+        self.modelBooks.setHeaderData(4, Qt.Horizontal, "AUTOR")
+        self.modelBooks.setHeaderData(5, Qt.Horizontal, "STRON")
+        self.modelBooks.setHeaderData(6, Qt.Horizontal, "WYDAWNICTWO")
+        self.modelBooks.setHeaderData(7, Qt.Horizontal, "ROK WYDANIA")
+        self.modelBooks.setHeaderData(8, Qt.Horizontal, "OPIS")
+
+
 
     def initializeReadersModel(self):
         self.modelReaders = QSqlTableModel()
