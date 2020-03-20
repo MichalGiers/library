@@ -19,6 +19,8 @@ class Ui_BookDialog(object):
         self.tableViewBooks.setObjectName("tableViewBooks")
         self.verticalLayout.addWidget(self.tableViewBooks)
         self.tableViewBooks.setSortingEnabled(True)
+        self.tableViewBooks.horizontalHeader().setStretchLastSection(True)
+
 
 
         self.retranslateUi(BookDialog)
