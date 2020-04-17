@@ -11,6 +11,6 @@ class BookDialog(QDialog, Ui_BookDialog):
     def __init__(self):
         super(BookDialog, self).__init__()
         self.setupUi(self)
-        self.setWindowTitle("Książka")
+        self.setWindowTitle("Książki")
         dbManager.initializeBooksModel()
         self.tableViewBooks.setModel(dbManager.modelBooks)
