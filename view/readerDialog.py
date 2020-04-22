@@ -37,5 +37,3 @@ class ReaderDialog(QDialog, Ui_Dialog):
         id = dbManager.modelReaders.data(dbManager.modelReaders.index(row, 0))
         dbManager.removeReader(id)
         print(id)
-
-
